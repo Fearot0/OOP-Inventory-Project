@@ -1,6 +1,6 @@
 package inventory;
 
-import java.time.LocalDate;
+import java.time.LocalDate;  // LocalDate is a special class data type that  shows the exact date.
 
 
 public class PerishableProduct extends Product {
