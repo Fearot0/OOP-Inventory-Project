@@ -39,7 +39,7 @@ public class Inventory {
     }
 
 
-    public boolean uptadeStock(int id, int newStock){
+    public boolean updateStock(int id, int newStock){
         Product p = findProductById(id);
         if (p != null){
             p.setStockQuantity(newStock);
