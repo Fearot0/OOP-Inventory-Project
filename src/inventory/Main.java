@@ -41,12 +41,17 @@ public class Main {
                     int stock =scanner.nextInt();
 
                     manager.addNewProduct(id,name,price,stock);
-                    break;
+
 
 
                     break;
 
                 case 2:
+                    System.out.print("Enter product id to remove: ");
+                    int removeId = scanner.nextInt();
+
+                    manager.removeProduct(removeId);
+
 
                     break;
 
