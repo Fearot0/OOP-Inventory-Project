@@ -97,8 +97,8 @@ public class Main {
                     break;
 
                 case 6:
+                    inventory.displayAllProducts();
 
-                    break;
 
                 case 0:
                     System.out.println("Exiting program...");
