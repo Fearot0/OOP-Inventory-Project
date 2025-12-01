@@ -90,6 +90,10 @@ public class Main {
 
                 case 5:
 
+                    System.out.print("Enter stock limit:  ");
+                    int limit = scanner.nextInt();
+
+                    inventory.printLowStockProducts(limit);
                     break;
 
                 case 6:
