@@ -68,6 +68,24 @@ public class Main {
 
                 case 4:
 
+                    System.out.print("Enter product id to search: ");
+                    int searchId = scanner.nextInt();
+
+                    Product found = inventory.findProductById(searchId);
+
+                    if (found != null){
+                        System.out.println("Product Found:");
+                        System.out.println("ID: " + found.getId());
+                        System.out.println("Name: " + found.getName());
+                        System.out.println("Price: " + found.getPrice());
+                        System.out.println("Stock Quantity: " + found.getStockQuantity());
+
+                    }
+
+                    else {
+                        System.out.println("Product Not Found");
+                    }
+
                     break;
 
                 case 5:
