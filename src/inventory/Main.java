@@ -57,6 +57,13 @@ public class Main {
 
                 case 3:
 
+                    System.out.print("Enter product id: ");
+                    int uptadeId = scanner.nextInt();
+
+                    System.out.print("Enter new stock quantity:");
+                    int newStock = scanner.nextInt();
+
+                    manager.changeStock(uptadeId,newStock);
                     break;
 
                 case 4:
