@@ -1,6 +1,6 @@
 package inventory;
 
-public class Product {
+public class Product implements Storable {
 
 
     private int id;

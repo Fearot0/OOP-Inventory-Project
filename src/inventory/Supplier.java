@@ -1,6 +1,6 @@
 package inventory;
 
-public class Supplier {
+public class Supplier implements  Storable {
     private int id;
     private String name;
     private String phone;
