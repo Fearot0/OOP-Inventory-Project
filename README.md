@@ -49,3 +49,16 @@ Example flow:
 - Choose option 1 to add a new product
 - Enter product id, name, price, and stock quantity
 - Use option 6 to display all products
+
+
+
+## Class Overview
+
+- **Product**: Represents a basic product with id, name, price, and stock quantity.
+- **PerishableProduct**: A product with an expiry date, extends Product.
+- **Supplier**: Holds supplier information such as id, name, and contact details.
+- **Inventory**: Stores and manages all products using a list structure.
+- **StockManager**: Controls inventory operations such as adding, removing, and updating products.
+- **Order**: Represents an order containing a product, quantity, and order date.
+- **Main**: Provides a console-based menu for user interaction.
+- **Storable**: An interface that defines common methods for storable objects.
