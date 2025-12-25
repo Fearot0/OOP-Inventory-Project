@@ -62,7 +62,7 @@ public class Inventory {
         }
     }
 
-S
+
     public void displayAllProducts() {
         System.out.println("All products in inventory:");
         if (products.isEmpty()) {
