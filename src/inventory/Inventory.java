@@ -54,14 +54,15 @@ public class Inventory {
         for (Product p : products){
             if (p.getStockQuantity() <= limit){
                 System.out.println(
-                        "ID: " + p.getId() + "Name: " + p.getName() + "Stock: " + p.getStockQuantity()
+                        "ID: " + p.getId() + " | Name: " + p.getName() + " | Stock: " + p.getStockQuantity()
+
                 );
 
             }
         }
     }
 
-
+S
     public void displayAllProducts() {
         System.out.println("All products in inventory:");
         if (products.isEmpty()) {
