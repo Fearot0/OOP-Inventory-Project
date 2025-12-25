@@ -64,20 +64,22 @@ public class Inventory {
 
 
     public void displayAllProducts() {
-        System.out.println("All products in inventory:");
         if (products.isEmpty()) {
             System.out.println("No products in inventory.");
             return;
         }
 
+        System.out.println("All products in inventory:");
+
         for (Product p : products) {
-            System.out.println("ID: " + p.getId()
-                    + "Name: " + p.getName()
-                    + "Price: " + p.getPrice()
-                    + "Stock: " + p.getStockQuantity());
+            System.out.println(
+                    "ID: " + p.getId() +
+                            " Name: " + p.getName() +
+                            " Price: " + p.getPrice() +
+                            " Stock: " + p.getStockQuantity()
+            );
         }
     }
-
 
 
 
