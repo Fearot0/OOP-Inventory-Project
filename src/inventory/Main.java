@@ -7,6 +7,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         Inventory inventory = new Inventory();
+        inventory.loadFromFile();
         StockManager manager = new StockManager(inventory);
 
         while (true) {
@@ -98,10 +99,13 @@ public class Main {
 
                 case 6:
                     inventory.displayAllProducts();
-
+                    break;
+                    
 
                 case 0:
-                    System.out.println("Exiting program...");
+                    inventory.saveToFile();
+                    System.out.println("Products saved. Exiting program...");
+
                     return;
 
                 default:

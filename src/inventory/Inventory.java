@@ -1,5 +1,7 @@
 package inventory;
 
+import java.io.*;
+
 import java.util.ArrayList;
 
 public class Inventory {
@@ -78,6 +80,43 @@ public class Inventory {
                             " Price: " + p.getPrice() +
                             " Stock: " + p.getStockQuantity()
             );
+        }
+    }
+
+
+    public void saveToFile() {
+        try (PrintWriter writer = new PrintWriter(new FileWriter("products.txt"))) {
+            for (Product p : products) {
+                writer.println(
+                        p.getId() + "," +
+                                p.getName() + "," +
+                                p.getPrice() + "," +
+                                p.getStockQuantity()
+                );
+            }
+        } catch (IOException e) {
+            System.out.println("Error saving products.");
+        }
+    }
+
+    public void loadFromFile() {
+        File file = new File("products.txt");
+        if (!file.exists()) return;
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] data = line.split(",");
+                Product p = new Product(
+                        Integer.parseInt(data[0]),
+                        data[1],
+                        Double.parseDouble(data[2]),
+                        Integer.parseInt(data[3])
+                );
+                products.add(p);
+            }
+        } catch (IOException e) {
+            System.out.println("Error loading products.");
         }
     }
 
